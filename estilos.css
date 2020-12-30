@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-blue: #007BFF;
+    --color-blue-hover: #006bdd;
+    --color-text: #212529;
+    --color-text-greey: rgb(108, 117, 125);
+    --bg--greey: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/*--- Header --- */
+
+.header {
+    width: 100%;
+    padding: 25px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "logo      opciones";
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    grid-area: logo;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header__menu {
+    grid-area: opciones;
+    font-family: 16px;
+}
+
+.header__link {
+    margin: 0px 5px;
+}
+
+.header__btn {
+    padding: 10px 15px;
+    background-color: #fff;
+    color: var(--color-blue);
+    border-radius: 5px;
+    border: 1px solid var(--color-blue);
+    margin-left: 15px;
+    transition: .3s;
+}
+
+.header__btn:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+    text-decoration: none;
+}
+
+/*--- Header --- */
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 0px 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "jumbotron     jumbotron       jumbotron"
+                         "card-1        card-2          card-3"
+                         "footer        footer          footer";
+}
+
+
+/*--- Jumbotron --- */
+
+.jumbotron {
+    grid-area: jumbotron;
+    margin: 60px;
+    justify-content: center;
+    text-align: center;
+}
+
+.jumbotron__title {
+    font-weight: 300;
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.jumbotron__texto {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    word-spacing: 2px;
+    line-height: 30px;
+    max-width: 700px;
+}
+
+/*--- cards --- */
+.card {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+.card-1 {
+    grid-area: card-1;
+}
+
+.card-2 {
+    grid-area: card-2;
+}
+
+.card-3 {
+    grid-area: card-3;
+}
+
+.card__title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    background-color: var(--bg--greey);
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card__body {
+    padding: 15px;
+}
+
+.card__pricing {
+    color: var(--color-text-greey);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+
+.card__pricing span {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--color-text);
+}
+
+.card__text {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.card__button {
+    padding: 10px 15px;
+    background-color: var(--color-blue);
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    transition: .3s;
+}
+
+.card__button:hover {
+    text-decoration: none;
+    background-color: var(--color-blue-hover);
+}
+
+.button--outline {
+    background-color: #fff;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+}
+
+.button--outline:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*--- Footer --- */
+
+.footer {
+    grid-area: footer;
+    margin: 55px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 45px;
+    text-decoration: none;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "logo      info        resources       about";
+}
+.footer__logo {
+    grid-area: logo;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.footer__info {
+    grid-area: info;
+}
+
+.footer__resources {
+    grid-area: resources;
+}
+
+.footer__about {
+    grid-area: about;
+}
+
+.footer__title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.footer__derechos {
+    font-size: 12px;
+    line-height: 19px;
+}
+
+.footer__items {
+    font-size: 16px;
+    line-height: 24px;
+    list-style-type: none;
+}
+
+.footer__items a {
+    color: var(--color-text-greey);
+}
